@@ -28,9 +28,13 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Company Info */}
                     <div className="space-y-4">
-                        <Image src="/logo.svg" alt="ReadyMade Homes Logo" width={150} height={40} className="invert" />
-                        <p className="text-white">
-                            Building your dream home faster and smarter with sustainable practices.
+                        <div className="text-3xl font-bold">
+                            <span className="text-[#23affd]">WE</span>
+              <span className="text-emerald-500">2</span>
+              <span className="text-white ">BUILDERS</span>
+                        </div>
+                        <p className="text-[#23affd]">
+                            Your Future our Build
                         </p>
                     </div>
 
@@ -75,7 +79,7 @@ export default function Footer() {
 
                 {/* Copyright */}
                 <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                    <p>© {new Date().getFullYear()} ReadyMade Homes. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} WE2Builders. All rights reserved.</p>
                 </div>
             </div>
         </footer>

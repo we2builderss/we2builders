@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X, Home } from 'lucide-react'
 
 export default function Navbar() {
@@ -23,7 +24,11 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center hover:opacity-80 transition">
-            <img src="/logo.svg" alt="ReadyMade Homes Logo" className="h-10 w-auto" />
+            <div className="text-3xl font-bold">
+              <span className="text-[#23affd]">WE</span>
+              <span className="text-emerald-500">2</span>
+              <span className="text-[#152259]">BUILDERS</span>
+            </div>
           </Link>
 
           {/* Desktop Menu */}
