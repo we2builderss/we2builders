@@ -31,7 +31,7 @@ export default function Footer() {
                         <div className="text-3xl font-bold">
                             <span className="text-[#23affd]">WE</span>
               <span className="text-emerald-500">2</span>
-              <span className="text-white ">BUILDERS</span>
+              <span className="text-white ">Builders</span>
                         </div>
                         <p className="text-[#23affd]">
                             Your Future our Build

@@ -1,6 +1,17 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Home, Clock, Shield, Leaf } from 'lucide-react'
+import {
+  IconHome2,
+  IconClockFilled,
+  IconShieldCheck,
+  IconLeaf,
+  IconPencil,
+  IconTools,
+  IconBuildingFactory2,
+  IconTruck
+} from '@tabler/icons-react'
+import { AnimatedFeatureCard, AnimatedProcessStep } from './components/AnimatedFeature'
 
 export default function HomePage() {
   return (
@@ -32,23 +43,23 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-5xl font-bold text-center mb-16 text-slate-900">Why Choose Us</h2>
           <div className="grid md:grid-cols-4 gap-8">
-            <FeatureCard 
-              icon={<Clock className="w-12 h-12" />}
+            <AnimatedFeatureCard
+              icon={<IconClockFilled size={48} strokeWidth={2} />}
               title="Quick Delivery"
               description="Houses ready in 4-8 weeks from order confirmation"
             />
-            <FeatureCard 
-              icon={<Shield className="w-12 h-12" />}
+            <AnimatedFeatureCard
+              icon={<IconShieldCheck size={48} strokeWidth={2} />}
               title="Quality Assured"
               description="Premium materials with 10-year structural warranty"
             />
-            <FeatureCard 
-              icon={<Leaf className="w-12 h-12" />}
+            <AnimatedFeatureCard
+              icon={<IconLeaf size={48} strokeWidth={2} />}
               title="Eco-Friendly"
               description="Sustainable and energy-efficient construction"
             />
-            <FeatureCard 
-              icon={<Home className="w-12 h-12" />}
+            <AnimatedFeatureCard
+              icon={<IconHome2 size={48} strokeWidth={2} />}
               title="Customizable"
               description="Flexible designs to match your vision"
             />
@@ -61,21 +72,21 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-5xl font-bold text-center mb-16 text-slate-900">Our Popular Models</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <ModelCard 
+            <ModelCard
               image="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800"
               title="Compact Nest"
               size="600 sq ft"
               price="$75,000"
               bedrooms={1}
             />
-            <ModelCard 
+            <ModelCard
               image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800"
               title="Family Haven"
               size="1200 sq ft"
               price="$135,000"
               bedrooms={3}
             />
-            <ModelCard 
+            <ModelCard
               image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
               title="Luxury Estate"
               size="2000 sq ft"
@@ -91,10 +102,30 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-5xl font-bold text-center mb-16">Simple Process</h2>
           <div className="grid md:grid-cols-4 gap-8">
-            <ProcessStep number="01" title="Choose Design" description="Select from our catalog or customize" />
-            <ProcessStep number="02" title="Site Preparation" description="We help prepare your land" />
-            <ProcessStep number="03" title="Manufacturing" description="Your home is built in our facility" />
-            <ProcessStep number="04" title="Installation" description="Delivered and assembled on-site" />
+            <AnimatedProcessStep
+              number="01"
+              title="Choose Design"
+              description="Select from our catalog or customize"
+              icon={<IconPencil size={32} stroke={2} />}
+            />
+            <AnimatedProcessStep
+              number="02"
+              title="Site Preparation"
+              description="We help prepare your land"
+              icon={<IconTools size={32} stroke={2} />}
+            />
+            <AnimatedProcessStep
+              number="03"
+              title="Manufacturing"
+              description="Your home is built in our facility"
+              icon={<IconBuildingFactory2 size={32} stroke={2} />}
+            />
+            <AnimatedProcessStep
+              number="04"
+              title="Installation"
+              description="Delivered and assembled on-site"
+              icon={<IconTruck size={32} stroke={2} />}
+            />
           </div>
         </div>
       </section>

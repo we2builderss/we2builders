@@ -27,7 +27,7 @@ export default function Navbar() {
             <div className="text-3xl font-bold">
               <span className="text-[#23affd]">WE</span>
               <span className="text-emerald-500">2</span>
-              <span className="text-[#152259]">BUILDERS</span>
+              <span className="text-[#152259]">Builders</span>
             </div>
           </Link>
 
