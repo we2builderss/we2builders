@@ -39,15 +39,15 @@ export default function Navbar() {
             <Link href="/about" className="text-slate-700 hover:text-emerald-500 font-medium transition-colors">
               About
             </Link>
-            <Link href="/process" className="text-slate-700 hover:text-emerald-500 font-medium transition-colors">
+            {/* <Link href="/process" className="text-slate-700 hover:text-emerald-500 font-medium transition-colors">
               Process
-            </Link>
+            </Link> */}
             <Link href="/gallery" className="text-slate-700 hover:text-emerald-500 font-medium transition-colors">
               Gallery
             </Link>
-            <Link href="/faq" className="text-slate-700 hover:text-emerald-500 font-medium transition-colors">
+            {/* <Link href="/faq" className="text-slate-700 hover:text-emerald-500 font-medium transition-colors">
               FAQ
-            </Link>
+            </Link> */}
             <Link href="/#contact" className="px-6 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-all hover:shadow-lg">
               Contact Us
             </Link>
@@ -81,13 +81,13 @@ export default function Navbar() {
               >
                 About
               </Link>
-              <Link
+              {/* <Link
                 href="/process"
                 className="text-slate-700 hover:text-emerald-500 font-medium transition-colors px-4 py-2 hover:bg-slate-50 rounded-lg"
                 onClick={() => setIsOpen(false)}
               >
                 Process
-              </Link>
+              </Link> */}
               <Link
                 href="/gallery"
                 className="text-slate-700 hover:text-emerald-500 font-medium transition-colors px-4 py-2 hover:bg-slate-50 rounded-lg"
@@ -95,13 +95,13 @@ export default function Navbar() {
               >
                 Gallery
               </Link>
-              <Link
+              {/* <Link
                 href="/faq"
                 className="text-slate-700 hover:text-emerald-500 font-medium transition-colors px-4 py-2 hover:bg-slate-50 rounded-lg"
                 onClick={() => setIsOpen(false)}
               >
                 FAQ
-              </Link>
+              </Link> */}
               <Link
                 href="/#contact"
                 className="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition text-center mx-4"
