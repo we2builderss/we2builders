@@ -76,23 +76,45 @@ export default function HomePage() {
             <ModelCard
               image="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800"
               title="Compact Nest"
-              size="600 sq ft"
+              size="120 sq"
               price="$75,000"
-              bedrooms={1}
+              dimensions="11 x 11"
             />
             <ModelCard
               image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800"
               title="Family Haven"
-              size="1200 sq ft"
+              size="180 sq"
               price="$135,000"
-              bedrooms={3}
+              dimensions="11 x 17"
             />
             <ModelCard
               image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
               title="Luxury Estate"
-              size="2000 sq ft"
+              size="231 sq"
+              dimensions="11 x 21"
               price="$220,000"
               bedrooms={4}
+            />
+            <ModelCard
+              image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
+              title="Luxury Estate"
+              size="475 sq"
+              price="$220,000"
+              bedrooms={1}
+            />
+            <ModelCard
+              image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
+              title="Luxury Estate"
+              size="720 sq"
+              price="$220,000"
+              bedrooms={2}
+            />
+            <ModelCard
+              image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
+              title="Luxury Estate"
+              size="1000 sq"
+              price="$220,000"
+              bedrooms={3}
             />
           </div>
         </div>
@@ -167,7 +189,7 @@ function FeatureCard({ icon, title, description }) {
   )
 }
 
-function ModelCard({ image, title, size, price, bedrooms }) {
+function ModelCard({ image, title, size, price, bedrooms, dimensions }) {
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group">
       <div className="relative h-64 overflow-hidden">
@@ -177,14 +199,14 @@ function ModelCard({ image, title, size, price, bedrooms }) {
         <h3 className="text-2xl font-bold mb-2 text-slate-900">{title}</h3>
         <div className="flex justify-between items-center mb-4 text-gray-600">
           <span>{size}</span>
-          <span>{bedrooms} Bed</span>
+          <span>{dimensions ? dimensions : `${bedrooms} BHK`}</span>
         </div>
-        <div className="flex justify-between items-center">
+        {/* <div className="flex justify-between items-center">
           <span className="text-3xl font-bold text-emerald-600">{price}</span>
           <button className="px-6 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-lg transition">
             Details
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   )
