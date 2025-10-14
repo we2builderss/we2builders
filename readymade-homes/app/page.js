@@ -12,6 +12,7 @@ import {
   IconTruck
 } from '@tabler/icons-react'
 import { AnimatedFeatureCard, AnimatedProcessStep } from './components/AnimatedFeature'
+import LocationPin from './components/LocationPin'
 
 export default function HomePage() {
   return (
@@ -147,6 +148,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Location Section */}
+      <LocationPin />
     </main>
   )
 }
