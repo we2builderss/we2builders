@@ -25,13 +25,13 @@ export default function Footer() {
     return (
         <footer className="bg-gray-900 text-white">
             <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
                     {/* Company Info */}
-                    <div className="space-y-4">
+                    <div className="space-y-4 md:col-span-3">
                         <div className="text-3xl font-bold">
                             <span className="text-[#23affd]">WE</span>
-              <span className="text-emerald-500">2</span>
-              <span className="text-white ">Builders</span>
+                            <span className="text-emerald-500">2</span>
+                            <span className="text-white ">Builders</span>
                         </div>
                         <p className="text-[#23affd]">
                             Your Future our Build
@@ -39,7 +39,7 @@ export default function Footer() {
                     </div>
 
                     {/* Quick Links */}
-                    <div>
+                    <div className="md:col-span-2">
                         <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-2">
                             <li><Link href="/" className="text-white hover:text-emerald-500 transition-colors">Home</Link></li>
@@ -50,18 +50,19 @@ export default function Footer() {
                     </div>
 
                     {/* Contact Info */}
-                    <div>
+                    <div className="md:col-span-4">
                         <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                         <ul className="space-y-2 text-white">
-                            <li>123 Construction Ave</li>
-                            <li>Building City, BC 12345</li>
-                            <li>Phone: (555) 123-4567</li>
-                            <li>Email: info@readymadehomes.com</li>
+                            <li style={{ whiteSpace: 'nowrap' }}>We2 builders,No:5381/A,S.kuppchipalayam,</li>
+                            <li>Allalapuram road ,ugayanur,</li>
+                            <li>Tirupur -641605.</li>
+                            <li>Phone: 9894619694, 6383702001</li>
+                            <li>Email: we2builder@gmail.com</li>
                         </ul>
                     </div>
 
                     {/* Social Links */}
-                    <div>
+                    <div className="md:col-span-3">
                         <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
                         <div className="flex space-x-6">
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-emerald-500 transition-colors">
