@@ -12,8 +12,8 @@ export function AnimatedFeatureCard({ icon, title, description }) {
             className="p-6 bg-slate-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
         >
             <motion.div
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
                 className="text-emerald-500 mb-4"
             >
                 {icon}
@@ -37,8 +37,8 @@ export function AnimatedProcessStep({ number, title, description, icon }) {
                 className="w-20 h-20 mx-auto mb-4 bg-emerald-400 rounded-full flex items-center justify-center"
             >
                 <motion.div
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.6 }}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
                     className="text-white"
                 >
                     {icon}
