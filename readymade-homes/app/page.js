@@ -80,6 +80,11 @@ export default function HomePage() {
               size="120 sq"
               price="$75,000"
               dimensions="11 x 11"
+              features={[
+                "Smart Space Utilization",
+                "Modern Kitchenette",
+                "Built-in Storage Solutions"
+              ]}
             />
             <ModelCard
               image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800"
@@ -87,6 +92,11 @@ export default function HomePage() {
               size="180 sq"
               price="$135,000"
               dimensions="11 x 17"
+              features={[
+                "Spacious Living Area",
+                "Contemporary Kitchen",
+                "Elegant Master Suite"
+              ]}
             />
             <ModelCard
               image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
@@ -95,6 +105,11 @@ export default function HomePage() {
               dimensions="11 x 21"
               price="$220,000"
               bedrooms={4}
+              features={[
+                "Premium Interior Finishes",
+                "Grand Entertainment Space",
+                "Luxury Master Suite"
+              ]}
             />
             <ModelCard
               image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
@@ -102,6 +117,11 @@ export default function HomePage() {
               size="475 sq"
               price="$220,000"
               bedrooms={1}
+              features={[
+                "Premium Interior Finishes",
+                "Grand Entertainment Space",
+                "Luxury Master Suite"
+              ]}
             />
             <ModelCard
               image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
@@ -109,6 +129,11 @@ export default function HomePage() {
               size="720 sq"
               price="$220,000"
               bedrooms={2}
+              features={[
+                "Premium Interior Finishes",
+                "Grand Entertainment Space",
+                "Luxury Master Suite"
+              ]}
             />
             <ModelCard
               image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
@@ -116,6 +141,11 @@ export default function HomePage() {
               size="1000 sq"
               price="$220,000"
               bedrooms={3}
+              features={[
+                "Premium Interior Finishes",
+                "Grand Entertainment Space",
+                "Luxury Master Suite"
+              ]}
             />
           </div>
         </div>
@@ -190,7 +220,8 @@ function FeatureCard({ icon, title, description }) {
   )
 }
 
-function ModelCard({ image, title, size, price, bedrooms, dimensions }) {
+function ModelCard({ image, title, size, price, bedrooms, dimensions, features = [] }) {
+
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group">
       <div className="relative h-64 overflow-hidden">
@@ -202,6 +233,18 @@ function ModelCard({ image, title, size, price, bedrooms, dimensions }) {
           <span>{size}</span>
           <span>{dimensions ? dimensions : `${bedrooms} BHK`}</span>
         </div>
+        {features.length > 0 && (
+          <ul className="space-y-2 mb-4">
+            {features.map((feature, index) => (
+              <li key={index} className="flex items-center text-gray-600 hover:text-emerald-600 transition-colors">
+                <svg className="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-sm font-medium">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        )}
         {/* <div className="flex justify-between items-center">
           <span className="text-3xl font-bold text-emerald-600">{price}</span>
           <button className="px-6 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-lg transition">
