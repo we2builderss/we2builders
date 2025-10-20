@@ -19,7 +19,7 @@ export default function AboutPage() {
                 <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
                     <h1 className="text-5xl font-bold mb-6">Building Dreams Since 2010</h1>
                     <p className="text-xl text-gray-300">
-                        We're more than just builders - we're your partners in creating the perfect home for your family.
+                        We&apos;re more than just builders - we&apos;re your partners in creating the perfect home for your family.
                     </p>
                 </div>
             </section>
@@ -36,7 +36,7 @@ export default function AboutPage() {
                             </p>
                             <p className="text-gray-600 mb-4">
                                 Our journey began with a simple mission: to create homes that families would love for
-                                generations. Today, we've built hundreds of homes across the region, each one a testament
+                                generations. Today, we&apos;ve built hundreds of homes across the region, each one a testament
                                 to our commitment to quality and customer satisfaction.
                             </p>
                         </div>
