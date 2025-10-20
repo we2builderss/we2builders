@@ -65,13 +65,13 @@ export default function Footer() {
                     <div className="md:col-span-3">
                         <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
                         <div className="flex space-x-6">
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-emerald-500 transition-colors">
+                            <a href="https://www.facebook.com/share/17QwdRyeFf/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-white hover:text-emerald-500 transition-colors">
                                 <FacebookIcon />
                             </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-emerald-500 transition-colors">
+                            <a href="https://www.instagram.com/we2_builders?igsh=cG4yazdtMHc2dm83" target="_blank" rel="noopener noreferrer" className="text-white hover:text-emerald-500 transition-colors">
                                 <InstagramIcon />
                             </a>
-                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-emerald-500 transition-colors">
+                            <a href="https://youtube.com/channel/UCv0_Dg0XgG44ju8w59vr25g?si=ZRKCb56JwKVjdIMH" target="_blank" rel="noopener noreferrer" className="text-white hover:text-emerald-500 transition-colors">
                                 <YouTubeIcon />
                             </a>
                         </div>
