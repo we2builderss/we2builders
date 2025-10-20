@@ -75,8 +75,8 @@ export default function HomePage() {
           <h2 className="text-5xl font-bold text-center mb-16 text-slate-900">Our Popular Models</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <ModelCard
-              image="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800"
-              title="Compact Nest"
+              image="/pic1.jpg"
+              title="Studio Plus"
               size="120 sq"
               price="$75,000"
               dimensions="11 x 11"
@@ -87,8 +87,8 @@ export default function HomePage() {
               ]}
             />
             <ModelCard
-              image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800"
-              title="Family Haven"
+              image="/pic1.jpg"
+              title="Urban Comfort"
               size="180 sq"
               price="$135,000"
               dimensions="11 x 17"
@@ -99,8 +99,8 @@ export default function HomePage() {
               ]}
             />
             <ModelCard
-              image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
-              title="Luxury Estate"
+              image="/pic3.jpg"
+              title="Family Suite"
               size="231 sq"
               dimensions="11 x 21"
               price="$220,000"
@@ -112,8 +112,8 @@ export default function HomePage() {
               ]}
             />
             <ModelCard
-              image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
-              title="Luxury Estate"
+              image="/pic2.jpg"
+              title="Executive Home"
               size="475 sq"
               price="$220,000"
               bedrooms={1}
@@ -124,8 +124,8 @@ export default function HomePage() {
               ]}
             />
             <ModelCard
-              image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
-              title="Luxury Estate"
+              image="/pic2.jpg"
+              title="Grand Villa"
               size="720 sq"
               price="$220,000"
               bedrooms={2}
@@ -136,8 +136,8 @@ export default function HomePage() {
               ]}
             />
             <ModelCard
-              image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
-              title="Luxury Estate"
+              image="/pic3.jpg"
+              title="Premium Estate"
               size="1000 sq"
               price="$220,000"
               bedrooms={3}
