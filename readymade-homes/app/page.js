@@ -161,10 +161,10 @@ export default function HomePage() {
             Get in touch with us today for a free consultation and quote
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a href="tel:+1234567890" className="px-8 py-4 bg-white hover:bg-gray-100 text-slate-900 font-semibold rounded-lg transition text-lg">
+            <a href="tel:+919894619694" className="px-8 py-4 bg-white hover:bg-gray-100 text-slate-900 font-semibold rounded-lg transition text-lg">
               Call Us Now
             </a>
-            <a href="mailto:info@readymadehomes.com" className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-lg transition text-lg">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=we2builder@gmail.com" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-lg transition text-lg">
               Email Us
             </a>
           </div>

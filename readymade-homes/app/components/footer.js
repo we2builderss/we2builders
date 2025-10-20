@@ -57,7 +57,7 @@ export default function Footer() {
                             <li>Allalapuram road ,ugayanur,</li>
                             <li>Tirupur -641605.</li>
                             <li>Phone: 9894619694, 6383702001</li>
-                            <li>Email: we2builder@gmail.com</li>
+                            <li>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=we2builder@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-500 transition-colors">we2builder@gmail.com</a></li>
                         </ul>
                     </div>
 
