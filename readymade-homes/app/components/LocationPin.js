@@ -2,7 +2,7 @@
 import Image from 'next/image';
 
 const LocationPin = () => {
-    const address = "We2 builders No:5381/A S.kuppchipalayam,Allalapuram road ,ugayanur,Tirupur -641605";
+    const address = "We2 builders No:538/1A S.kuppchipalayam,Allalapuram road,ugayanur,Tirupur -641605";
     const coordinates = { lat: 11.041236074644122, lng: 77.353156 };
     const googleMapsUrl = `https://www.google.com/maps?q=${coordinates.lat},${coordinates.lng}&z=16`;
 

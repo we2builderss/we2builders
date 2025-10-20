@@ -26,7 +26,8 @@ export default function HomePage() {
             <span className="block text-emerald-400">In Record Time</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Premium readymade houses delivered and installed within weeks. Quality construction, sustainable materials, modern designs.
+            <span className="block mb-2">Premium readymade houses delivered and installed within weeks.</span>
+            <span className="block text-emerald-300">Quality construction • Sustainable materials • Modern designs</span>
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link href="#models" className="px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition text-lg">

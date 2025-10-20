@@ -53,8 +53,8 @@ export default function Footer() {
                     <div className="md:col-span-4">
                         <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                         <ul className="space-y-2 text-white">
-                            <li style={{ whiteSpace: 'nowrap' }}>We2 builders,No:5381/A,S.kuppchipalayam,</li>
-                            <li>Allalapuram road ,ugayanur,</li>
+                            <li style={{ whiteSpace: 'nowrap' }}>We2 builders,No:538/1A,S.kuppchipalayam,</li>
+                            <li>Allalapuram road,ugayanur,</li>
                             <li>Tirupur -641605.</li>
                             <li>Phone: 9894619694, 6383702001</li>
                             <li>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=we2builder@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-500 transition-colors">we2builder@gmail.com</a></li>
