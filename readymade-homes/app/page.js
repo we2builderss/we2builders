@@ -81,9 +81,9 @@ export default function HomePage() {
               price="$75,000"
               dimensions="11 x 11"
               features={[
-                "Smart Space Utilization",
-                "Modern Kitchenette",
-                "Built-in Storage Solutions"
+                "Wooden finished steel door",
+                "Upvc windows with mosquito net",
+                "Finished tile work,painting,wiring"
               ]}
             />
             <ModelCard
@@ -93,9 +93,9 @@ export default function HomePage() {
               price="$135,000"
               dimensions="11 x 17"
               features={[
-                "Spacious Living Area",
-                "Contemporary Kitchen",
-                "Elegant Master Suite"
+                "Wooden finished steel door",
+                "Upvc windows with mosquito net",
+                "Finished tile work,painting,wiring"
               ]}
             />
             <ModelCard
@@ -106,9 +106,9 @@ export default function HomePage() {
               price="$220,000"
               bedrooms={4}
               features={[
-                "Premium Interior Finishes",
-                "Grand Entertainment Space",
-                "Luxury Master Suite"
+                "Wooden finished steel door",
+                "Upvc windows with mosquito net",
+                "Finished tile work,painting,wiring"
               ]}
             />
             <ModelCard
@@ -118,9 +118,9 @@ export default function HomePage() {
               price="$220,000"
               bedrooms={1}
               features={[
-                "Premium Interior Finishes",
-                "Grand Entertainment Space",
-                "Luxury Master Suite"
+                "Wooden finished steel door",
+                "Granite for kitchen top&self",
+                "Finished tile work,painting,wiring"
               ]}
             />
             <ModelCard
@@ -130,9 +130,9 @@ export default function HomePage() {
               price="$220,000"
               bedrooms={2}
               features={[
-                "Premium Interior Finishes",
-                "Grand Entertainment Space",
-                "Luxury Master Suite"
+                "Wooden finished steel door",
+                "Granite for kitchen top&self",
+                "7feet tile,wiring &plumbing  points in bathroom"
               ]}
             />
             <ModelCard
@@ -142,9 +142,9 @@ export default function HomePage() {
               price="$220,000"
               bedrooms={3}
               features={[
-                "Premium Interior Finishes",
-                "Grand Entertainment Space",
-                "Luxury Master Suite"
+                "Wooden finished steel door",
+                "Granite for kitchen top&self",
+                "7feet tile,wiring &plumbing  points in bathroom"
               ]}
             />
           </div>
@@ -192,7 +192,7 @@ export default function HomePage() {
             Get in touch with us today for a free consultation and quote
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a href="tel:+919894619694" className="px-8 py-4 bg-white hover:bg-gray-100 text-slate-900 font-semibold rounded-lg transition text-lg">
+            <a href="tel:+916383702001" className="px-8 py-4 bg-white hover:bg-gray-100 text-slate-900 font-semibold rounded-lg transition text-lg">
               Call Us Now
             </a>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=we2builder@gmail.com" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-lg transition text-lg">
