@@ -56,7 +56,7 @@ export default function HomePage() {
             <AnimatedFeatureCard
               icon={<IconShieldCheck size={48} strokeWidth={2} />}
               title="Quality Assured"
-              description="Premium materials with 10-year structural warranty"
+              description="Premium materials with life time structural warranty"
             />
             <AnimatedFeatureCard
               icon={<IconLeaf size={48} strokeWidth={2} />}
@@ -270,10 +270,9 @@ function ModelCard({ video, title, size, price, bedrooms, dimensions, features =
         </div>
       </div>
       <div className="p-6">
-        <h3 className="text-2xl font-bold mb-2 text-slate-900">{title}</h3>
-        <div className="flex justify-between items-center mb-4 text-gray-600">
-          <span>{size}</span>
-          <span>{dimensions ? dimensions : `${bedrooms} BHK`}</span>
+        <div className="flex justify-between items-center mb-4">
+          <span className="text-2xl font-bold text-slate-900">{size}</span>
+          <span className="text-2xl font-bold text-slate-900">{dimensions ? dimensions : `${bedrooms} BHK`}</span>
         </div>
         {features.length > 0 && (
           <ul className="space-y-2 mb-4">
