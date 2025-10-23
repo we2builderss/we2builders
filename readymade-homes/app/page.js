@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState, useRef } from 'react'
 import { Home, Clock, Shield, Leaf } from 'lucide-react'
 import {
   IconHome2,
@@ -75,7 +78,7 @@ export default function HomePage() {
           <h2 className="text-5xl font-bold text-center mb-16 text-slate-900">Our Popular Models</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <ModelCard
-              image="/pic1.jpg"
+              video="/11_11.mp4"
               title="Studio Plus"
               size="120 sq"
               price="$75,000"
@@ -87,7 +90,7 @@ export default function HomePage() {
               ]}
             />
             <ModelCard
-              image="/pic1.jpg"
+              video="/11_17.mp4"
               title="Urban Comfort"
               size="180 sq"
               price="$135,000"
@@ -99,7 +102,7 @@ export default function HomePage() {
               ]}
             />
             <ModelCard
-              image="/pic3.jpg"
+              video="/11_21.mp4"
               title="Family Suite"
               size="231 sq"
               dimensions="11 x 21"
@@ -112,7 +115,7 @@ export default function HomePage() {
               ]}
             />
             <ModelCard
-              image="/pic2.jpg"
+              video="/1bhk.mp4"
               title="Executive Home"
               size="475 sq"
               price="$220,000"
@@ -124,7 +127,7 @@ export default function HomePage() {
               ]}
             />
             <ModelCard
-              image="/pic2.jpg"
+              video="/2bhk.mp4"
               title="Grand Villa"
               size="720 sq"
               price="$220,000"
@@ -136,7 +139,7 @@ export default function HomePage() {
               ]}
             />
             <ModelCard
-              image="/pic3.jpg"
+              video="/3bhk.mp4"
               title="Premium Estate"
               size="1000 sq"
               price="$220,000"
@@ -220,12 +223,51 @@ function FeatureCard({ icon, title, description }) {
   )
 }
 
-function ModelCard({ image, title, size, price, bedrooms, dimensions, features = [] }) {
+function ModelCard({ video, title, size, price, bedrooms, dimensions, features = [] }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null);
+
+  const handleVideoClick = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group">
       <div className="relative h-64 overflow-hidden">
-        <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+        <video
+          ref={videoRef}
+          src={video}
+          className="w-full h-full object-cover"
+          loop
+          playsInline
+          controls
+          onPlay={() => setIsPlaying(true)}
+          onPause={() => setIsPlaying(false)}
+        />
+        <div
+          className={`absolute inset-0 bg-black ${isPlaying ? 'bg-opacity-0 pointer-events-none' : 'bg-opacity-40'} flex items-center justify-center cursor-pointer hover:bg-opacity-30 transition-all duration-300`}
+          onClick={handleVideoClick}
+        >
+          {!isPlaying && (
+            <div className="w-14 h-14 rounded-full bg-emerald-500 bg-opacity-90 flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-xl">
+              <svg
+                className="w-8 h-8 text-white ml-0.5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M8 5.14v14.72L19 12 8 5.14z" />
+              </svg>
+            </div>
+          )}
+        </div>
       </div>
       <div className="p-6">
         <h3 className="text-2xl font-bold mb-2 text-slate-900">{title}</h3>
