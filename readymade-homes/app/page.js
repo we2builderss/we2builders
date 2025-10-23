@@ -227,6 +227,25 @@ function ModelCard({ video, title, size, price, bedrooms, dimensions, features =
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
 
+  // Get poster based on dimensions/type
+  const getPoster = (videoPath) => {
+    if (videoPath.includes('11_11')) {
+      return 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80';
+    } else if (videoPath.includes('11_17')) {
+      return 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80';
+    } else if (videoPath.includes('11_21')) {
+      return 'https://images.unsplash.com/photo-1600047509358-9dc75507daeb?auto=format&fit=crop&w=800&q=80';
+    } else if (videoPath.includes('1bhk')) {
+      return 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80';
+    } else if (videoPath.includes('2bhk')) {
+      return 'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=800&q=80';
+    } else if (videoPath.includes('3bhk')) {
+      return 'https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=800&q=80';
+    } else {
+      return 'https://images.unsplash.com/photo-1600047509782-20d39509f26c?auto=format&fit=crop&w=800&q=80';
+    }
+  };
+
   const handleVideoClick = () => {
     if (videoRef.current) {
       if (isPlaying) {
@@ -244,6 +263,7 @@ function ModelCard({ video, title, size, price, bedrooms, dimensions, features =
         <video
           ref={videoRef}
           src={video}
+          poster={getPoster(video)}
           className="w-full h-full object-cover"
           loop
           playsInline
