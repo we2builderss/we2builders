@@ -90,6 +90,7 @@ export default function AboutPage() {
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
                             'CP.Shanmugam',
+                            'Seaker',
                             'Prakash',
                             'Prasanth'
                         ].map((name, index) => (
