@@ -1,5 +1,4 @@
 /*
-  X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: no-referrer
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
@@ -13,7 +12,7 @@
       https://www.google.com
       https://maps.google.com
       https://www.google.co.in;
-    script-src 'self' https://maps.googleapis.com https://maps.gstatic.com;
+    script-src 'self' https://maps.googleapis.com https://maps.gstatic.com https://www.youtube.com https://www.youtube-nocookie.com; 
     connect-src 'self';
     style-src 'self' 'unsafe-inline';
   Permissions-Policy: geolocation=(), microphone=(), camera=()
