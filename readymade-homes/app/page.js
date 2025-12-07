@@ -237,16 +237,14 @@ function ModelCard({ video, title, size, price, bedrooms, dimensions, features =
       <div className="relative h-64 overflow-hidden">
         {isYouTubeVideo ? (
           <iframe
-  width="100%"
-  height="100%"
-  src={video}
-  title={title}
-  frameBorder="0"
-  sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-  referrerPolicy="no-referrer"
-  allow="accelerometer; autoplay; encrypted-media; clipboard-write; gyroscope; picture-in-picture"
-  allowFullScreen
-/>
+            width="100%"
+            height="100%"
+            src={video}
+            title={title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
 
         ) : (
           <video
