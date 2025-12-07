@@ -1,0 +1,19 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Content-Security-Policy:
+    default-src 'self';
+    img-src 'self' data: blob: https://images.unsplash.com;
+    media-src 'self' blob: data:;
+    frame-src 'self'
+      https://www.youtube.com
+      https://www.youtube-nocookie.com
+      https://www.google.com
+      https://maps.google.com
+      https://www.google.co.in;
+    script-src 'self' https://maps.googleapis.com https://maps.gstatic.com;
+    connect-src 'self';
+    style-src 'self' 'unsafe-inline';
+  Permissions-Policy: geolocation=(), microphone=(), camera=()

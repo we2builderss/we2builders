@@ -141,7 +141,7 @@ export default function HomePage() {
             <ModelCard
   video="/g_plus_1.mp4"
   title="G+1 Residence"
-  size="1000 sq"
+  size="All Sizes"
   price="$220,000"
   dimensions="G+1"
   features={[
@@ -198,12 +198,15 @@ export default function HomePage() {
             <a href="tel:+916383702001" className="px-8 py-4 bg-white hover:bg-gray-100 text-slate-900 font-semibold rounded-lg transition text-lg">
               Call Us Now
             </a>
-           <a 
-  href="mailto:we2builder@gmail.com"
+           <a
+  href="https://mail.google.com/mail/?view=cm&to=we2builder@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
   className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-lg transition text-lg"
 >
   Email Us
 </a>
+
           </div>
         </div>
       </section>
@@ -234,14 +237,17 @@ function ModelCard({ video, title, size, price, bedrooms, dimensions, features =
       <div className="relative h-64 overflow-hidden">
         {isYouTubeVideo ? (
           <iframe
-            width="100%"
-            height="100%"
-            src={video}
-            title={title}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+  width="100%"
+  height="100%"
+  src={video}
+  title={title}
+  frameBorder="0"
+  sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+  referrerPolicy="no-referrer"
+  allow="accelerometer; autoplay; encrypted-media; clipboard-write; gyroscope; picture-in-picture"
+  allowFullScreen
+/>
+
         ) : (
           <video
             src={video}
