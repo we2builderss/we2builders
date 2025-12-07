@@ -25,12 +25,12 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920')] bg-cover bg-center opacity-20"></div>
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight">
-            Build Your Dream Home
-            <span className="block text-emerald-400">In Record Time</span>
+            Dream House
+            <span className="block text-emerald-400">In Three Weeks</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            <span className="block mb-2">Premium readymade houses delivered and installed within weeks.</span>
-            <span className="block text-emerald-300">Quality construction • Sustainable materials • Modern designs</span>
+            <span className="block mb-2">Stronger Long lasting...Portable Concrete Home...</span>
+            <span className="block text-emerald-300">Our Work Your Happiness...</span>
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link href="#models" className="px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition text-lg">
@@ -115,7 +115,7 @@ export default function HomePage() {
               ]}
             />
             <ModelCard
-              video="/1bhk.mp4"
+              video="https://www.youtube.com/embed/wCrpr1XOltE"
               title="Executive Home"
               size="475 sq"
               price="$220,000"
@@ -139,17 +139,17 @@ export default function HomePage() {
               ]}
             />
             <ModelCard
-              video="/3bhk.mp4"
-              title="Premium Estate"
-              size="1000 sq"
-              price="$220,000"
-              bedrooms={3}
-              features={[
-                "Wooden finished steel door",
-                "Granite for kitchen top&self",
-                "7feet tile,wiring &plumbing  points in bathroom"
-              ]}
-            />
+  video="/g_plus_1.mp4"
+  title="G+1 Residence"
+  size="1000 sq"
+  price="$220,000"
+  dimensions="G+1"
+  features={[
+    "Wooden finished steel door",
+    "Granite for kitchen top&self",
+    "7feet tile,wiring &plumbing  points in bathroom"
+  ]}
+/>
           </div>
         </div>
       </section>
@@ -198,9 +198,12 @@ export default function HomePage() {
             <a href="tel:+916383702001" className="px-8 py-4 bg-white hover:bg-gray-100 text-slate-900 font-semibold rounded-lg transition text-lg">
               Call Us Now
             </a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=we2builder@gmail.com" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-lg transition text-lg">
-              Email Us
-            </a>
+           <a 
+  href="mailto:we2builder@gmail.com"
+  className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-lg transition text-lg"
+>
+  Email Us
+</a>
           </div>
         </div>
       </section>
@@ -224,70 +227,29 @@ function FeatureCard({ icon, title, description }) {
 }
 
 function ModelCard({ video, title, size, price, bedrooms, dimensions, features = [] }) {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef(null);
-
-  // Get poster based on dimensions/type
-  const getPoster = (videoPath) => {
-    if (videoPath.includes('11_11')) {
-      return 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80';
-    } else if (videoPath.includes('11_17')) {
-      return 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80';
-    } else if (videoPath.includes('11_21')) {
-      return 'https://images.unsplash.com/photo-1600047509358-9dc75507daeb?auto=format&fit=crop&w=800&q=80';
-    } else if (videoPath.includes('1bhk')) {
-      return 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80';
-    } else if (videoPath.includes('2bhk')) {
-      return 'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=800&q=80';
-    } else if (videoPath.includes('3bhk')) {
-      return 'https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=800&q=80';
-    } else {
-      return 'https://images.unsplash.com/photo-1600047509782-20d39509f26c?auto=format&fit=crop&w=800&q=80';
-    }
-  };
-
-  const handleVideoClick = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
+  const isYouTubeVideo = video.includes('youtube.com') || video.includes('youtu.be');
 
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group">
       <div className="relative h-64 overflow-hidden">
-        <video
-          ref={videoRef}
-          src={video}
-          poster={getPoster(video)}
-          className="w-full h-full object-cover"
-          loop
-          playsInline
-          controls
-          onPlay={() => setIsPlaying(true)}
-          onPause={() => setIsPlaying(false)}
-        />
-        <div
-          className={`absolute inset-0 bg-black ${isPlaying ? 'bg-opacity-0 pointer-events-none' : 'bg-opacity-40'} flex items-center justify-center cursor-pointer hover:bg-opacity-30 transition-all duration-300`}
-          onClick={handleVideoClick}
-        >
-          {!isPlaying && (
-            <div className="w-14 h-14 rounded-full bg-emerald-500 bg-opacity-90 flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-xl">
-              <svg
-                className="w-8 h-8 text-white ml-0.5"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M8 5.14v14.72L19 12 8 5.14z" />
-              </svg>
-            </div>
-          )}
-        </div>
+        {isYouTubeVideo ? (
+          <iframe
+            width="100%"
+            height="100%"
+            src={video}
+            title={title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : (
+          <video
+            src={video}
+            className="w-full h-full object-cover"
+            controls
+            playsInline
+          />
+        )}
       </div>
       <div className="p-6">
         <div className="flex justify-between items-center mb-4">
@@ -306,12 +268,6 @@ function ModelCard({ video, title, size, price, bedrooms, dimensions, features =
             ))}
           </ul>
         )}
-        {/* <div className="flex justify-between items-center">
-          <span className="text-3xl font-bold text-emerald-600">{price}</span>
-          <button className="px-6 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-lg transition">
-            Details
-          </button>
-        </div> */}
       </div>
     </div>
   )

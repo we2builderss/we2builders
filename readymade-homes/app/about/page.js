@@ -30,14 +30,9 @@ export default function AboutPage() {
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>
                             <h2 className="text-4xl font-bold mb-6">Our Story</h2>
+                            
                             <p className="text-gray-600 mb-4">
-                                Founded in 2023, We2Builders has been at the forefront of innovative home construction,
-                                combining traditional craftsmanship with modern building techniques.
-                            </p>
-                            <p className="text-gray-600 mb-4">
-                                Our journey began with a simple mission: to create homes that families would love for
-                                generations. Today, we&apos;ve built hundreds of homes across the region, each one a testament
-                                to our commitment to quality and customer satisfaction.
+                                At WE2 Builders, we redefine modern construction with innovation, efficiency, and unwavering quality. From residential heavens to commercial spaces, we bring expertise and precision to every project, ensuring durability and elegance that stand the test of time. Your vision, our commitment—building a better tomorrow, today.
                             </p>
                         </div>
                         <div className="relative w-full h-[200px] md:h-[280px] lg:h-[320px]">

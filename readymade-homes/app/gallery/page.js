@@ -4,21 +4,21 @@ export default function Gallery() {
     const galleryImages = [
         {
             id: 1,
-            src: '/gallery-1.svg',
+            src: '/gallery1.jpg',
             alt: 'Gallery Image 1',
             width: 400,
             height: 300,
         },
         {
             id: 2,
-            src: '/gallery-2.svg',
+            src: '/gallery2.jpg',
             alt: 'Gallery Image 2',
             width: 400,
             height: 300,
         },
         {
             id: 3,
-            src: '/gallery-3.svg',
+            src: '/gallery3.jpg',
             alt: 'Gallery Image 3',
             width: 400,
             height: 300,
@@ -45,13 +45,13 @@ export default function Gallery() {
                             key={image.id}
                             className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
                         >
-                            <div className="aspect-w-4 aspect-h-3">
+                            <div className="relative w-full pb-[75%]"> {/* Maintains 4:3 aspect ratio */}
                                 <Image
                                     src={image.src}
                                     alt={image.alt}
-                                    width={image.width}
-                                    height={image.height}
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    className="absolute inset-0 w-full h-full object-cover"
                                 />
                             </div>
                             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity duration-300 flex items-center justify-center">
